@@ -1,5 +1,5 @@
 """
-This module provides a diverse set of mathematical functions. Use it to perform calculations.
+Math module provides a diverse set of mathematical functions. Use it to perform calculations.
 """
 
 import builtins
@@ -17,9 +17,9 @@ __version__ = sys.version
 # === Basic Math Functions ===
 
 
-def add(a: float, b: float) -> float:
-    """Return the sum of a and b"""
-    return a + b
+def add(array: list[float]) -> float:
+    """Return the sum of all the elements in the array of numbers."""
+    return builtins.sum(array)
 
 
 def subtract(a: float, b: float) -> float:
@@ -27,9 +27,9 @@ def subtract(a: float, b: float) -> float:
     return a - b
 
 
-def multiply(a: float, b: float) -> float:
-    """Return the product of a and b"""
-    return a * b
+def multiply(array: list[float]) -> float:
+    """Return the product of all the elements in the array of numbers."""
+    return stdlib_math.prod(array)
 
 
 def divide(a: float, b: float) -> float:
@@ -52,14 +52,14 @@ def power(a: float, b: float) -> float:
     return a**b
 
 
-def minimum(a: float, b: float) -> float:
-    """Return the smaller of two numbers"""
-    return min(a, b)
+def minimum(array: list[float]) -> float:
+    """Return the smallest number in the array"""
+    return min(array)
 
 
-def maximum(a: float, b: float) -> float:
-    """Return the larger of two numbers"""
-    return max(a, b)
+def maximum(array: list[float]) -> float:
+    """Return the largest number in the array"""
+    return max(array)
 
 
 def sign(x: float) -> int:
@@ -78,6 +78,7 @@ def round(x: float, n: int = 0) -> float:
 
 
 # abc is available under Floating Point Functions.
+
 
 # === Trigonometric Functions ===
 
