@@ -545,19 +545,19 @@ wheels = [
 
 [[package]]
 name = "minimcp"
-version = "0.3.3"
+version = "0.3.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mcp" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d8/2b/c68f8e4b31433da0516ce01d78820f14d6cea4eef00f7bea1b1d9ced7605/minimcp-0.3.3.tar.gz", hash = "sha256:b9347f8a9cd6353fe5e1f606cc5cb9c18da35e91706189330971e5100fabc26a", size = 164666, upload-time = "2025-09-17T05:30:44.138Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e5/b0/ee5bd4ba2875886725da613ee507f9c36c13fe50d9e473f63f56cb297336/minimcp-0.3.5.tar.gz", hash = "sha256:54163487655ddd55df4982c2fad47f1fc179960056071f3e332031af0f886049", size = 164891, upload-time = "2025-09-19T00:36:01.435Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/84/ec321857c034afe45cc1fc1e832670e1184735d2cad40e8e4142deffd467/minimcp-0.3.3-py3-none-any.whl", hash = "sha256:034aa37367f0614c1d664ba71d6b899f7f5bf7cb25f437cf9d306e15228b5c08", size = 36410, upload-time = "2025-09-17T05:30:42.558Z" },
+    { url = "https://files.pythonhosted.org/packages/2f/05/d475cd500c30b54c908ee7d7f71076e5cdcd31577d24789f9548c8533c52/minimcp-0.3.5-py3-none-any.whl", hash = "sha256:1f436ff354ab6b500ea3896bb7046a2eae4a963c451f10485f3a9573d1a4a751", size = 36215, upload-time = "2025-09-19T00:35:55.911Z" },
 ]
 
 [[package]]
 name = "minimcp-servers"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "minimcp" },
@@ -576,7 +576,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "minimcp", specifier = ">=0.3.3" }]
+requires-dist = [{ name = "minimcp", specifier = ">=0.3.5" }]
 
 [package.metadata.requires-dev]
 dev = [

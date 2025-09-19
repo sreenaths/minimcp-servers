@@ -1,6 +1,6 @@
 [project]
 name = "minimcp-servers"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP servers built with MiniMCP to expose Python’s standard library modules."
 authors = [{ name = "Sreenath Somarajapuram", email = "somarajapuram@gmail.com" }]
 readme = "README.md"
@@ -17,7 +17,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "minimcp>=0.3.3",
+    "minimcp>=0.3.5",
 ]
 
 [dependency-groups]
@@ -37,7 +37,8 @@ Repository = "https://github.com/sreenaths/minimcp-servers"
 PyPI = "https://pypi.org/project/minimcp-servers/"
 
 [project.scripts]
-stdio-math-server = "examples.math_mcp_server.stdio:main"
+math-server = "minimcp_servers.servers.math:main"
+basic-math-server = "minimcp_servers.servers.basic_math:main"
 
 [build-system]
 requires = ["hatchling"]
