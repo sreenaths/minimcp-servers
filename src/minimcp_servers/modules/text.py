@@ -39,6 +39,11 @@ def most_common_words(text: str, k: int, case_sensitive: bool = False, min_len: 
     Counting is case-insensitive by default, input text is case-folded before counting unless case_sensitive = True.
     Words with length less than min_len are ignored.
     """
+    if k < 0:
+        raise ValueError(f"k must be non-negative, got {k}")
+    if min_len < 0:
+        raise ValueError(f"min_len must be non-negative, got {min_len}")
+
     if not case_sensitive:
         text = text.casefold()
     words = WORD_RE.findall(text)
@@ -143,8 +148,14 @@ def base64_encode(data: str) -> str:
 def base64_decode(data: str) -> str:
     """
     Return the Base64 decoded string of the input data.
+
+    Args:
+        data: Base64 encoded string to decode
     """
-    return base64.b64decode(data.encode(_ENCODING)).decode(_ENCODING)
+    try:
+        return base64.b64decode(data.encode(_ENCODING)).decode(_ENCODING)
+    except Exception as e:
+        raise ValueError(f"Invalid Base64 input: {data!r}") from e
 
 
 def base64_urlsafe_encode(data: str) -> str:
@@ -158,7 +169,10 @@ def base64_urlsafe_decode(data: str) -> str:
     """
     Return the Base64 URL-safe decoded string of the input data.
     """
-    return base64.urlsafe_b64decode(data.encode(_ENCODING)).decode(_ENCODING)
+    try:
+        return base64.urlsafe_b64decode(data.encode(_ENCODING)).decode(_ENCODING)
+    except Exception as e:
+        raise ValueError(f"Invalid Base64 URL-safe input: {data!r}") from e
 
 
 # === Hex ===
@@ -175,4 +189,10 @@ def hex_decode(data: str) -> str:
     """
     Return the Hex decoded string of the input data.
     """
-    return bytes.fromhex(data).decode(_ENCODING)
+    if len(data) % 2 != 0:
+        raise ValueError(f"Hex string must have even length, got {len(data)}")
+
+    try:
+        return bytes.fromhex(data).decode(_ENCODING)
+    except ValueError as e:
+        raise ValueError(f"Invalid hex string: {data!r}") from e

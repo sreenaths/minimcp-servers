@@ -18,6 +18,13 @@ def geometric_mean(data: list[float]) -> float:
     Raises a StatisticsError if the input dataset is empty,
     if it contains a zero, or if it contains a negative value.
     """
+    if not data:
+        raise statistics.StatisticsError("geometric_mean requires at least one data point")
+
+    # Handle precision issues for identical values
+    if len(set(data)) == 1:
+        return data[0]  # All values are identical, avoid precision loss
+
     return statistics.geometric_mean(data)
 
 

@@ -23,7 +23,7 @@ def mcp_from_module(name: str, version: str, instructions: str, modules: list[Mo
         MiniMCP server instance with all module functions registered as tools
     """
 
-    mcp = MiniMCP(name, version=version, instructions=instructions)
+    mcp = MiniMCP(name.strip(), version=version.strip(), instructions=instructions.strip())
 
     # Get all public callable functions from the module
     functions = []

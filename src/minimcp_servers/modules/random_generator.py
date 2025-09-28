@@ -23,6 +23,19 @@ def generate_random_text(length: int = 10) -> str:
     """
     Generate and return a cryptographically secure text string of the specified length.
     Default length is 10.
+
+    Args:
+        length: The length of the string to generate (must be non-negative)
+
+    Returns:
+        A random string containing letters and digits
+
+    Raises:
+        ValueError: If length is negative
     """
+    if length < 0:
+        raise ValueError("length must be non-negative")
+    if length == 0:
+        return ""
     alphabets = string.ascii_letters + string.digits
     return "".join(secrets.choice(alphabets) for _ in range(length))

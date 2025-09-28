@@ -66,6 +66,8 @@ def sign(x: float) -> int:
 
 def clamp(x: float, min_val: float, max_val: float) -> float:
     """Clamp x to be between min_val and max_val"""
+    if min_val > max_val:
+        raise ValueError("min_val must be <= max_val")
     return max(min_val, min(x, max_val))
 
 

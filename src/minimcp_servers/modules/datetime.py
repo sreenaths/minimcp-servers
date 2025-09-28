@@ -41,6 +41,8 @@ def iso_utc_to_epoch(iso_utc: str) -> int:
 
 def is_valid_iso_format(iso_str: str) -> bool:
     """Check if a string is a valid ISO 8601 format."""
+    if not isinstance(iso_str, str):
+        return False
     try:
         datetime.datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
         return True
