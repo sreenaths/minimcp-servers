@@ -37,7 +37,11 @@ Repository = "https://github.com/sreenaths/minimcp-servers"
 PyPI = "https://pypi.org/project/minimcp-servers/"
 
 [project.scripts]
-stdio-math-server = "examples.math_mcp_server.stdio:main"
+math-utils = "minimcp_servers.servers.math_utils:main"
+arithmetic-math-utils = "minimcp_servers.servers.arithmetic_math_utils:main"
+continuous-math-utils = "minimcp_servers.servers.continuous_math_utils:main"
+discrete-math-utils = "minimcp_servers.servers.discrete_math_utils:main"
+statistics-math-utils = "minimcp_servers.servers.statistics_math_utils:main"
 
 [build-system]
 requires = ["hatchling"]

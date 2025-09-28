@@ -6,3 +6,29 @@
 [![PyPI version](https://img.shields.io/pypi/v/minimcp-servers.svg)](https://pypi.org/project/minimcp-servers/)
 
 MCP servers built with MiniMCP to expose Python’s standard library modules.
+
+## Claude Desktop
+
+Claude desktop can be configured to use the Math server as follows.
+
+```json
+{
+    "mcpServers":
+    {
+        "math-server":
+        {
+            "command": "uvx",
+            "args":
+            [
+                "--from",
+                "minimcp-servers",
+                "math-server"
+            ],
+            "env":
+            {
+                "MCP_SERVER_LOG_FILE": "/tmp/math_mcp_server.log"
+            }
+        }
+    }
+}
+```
