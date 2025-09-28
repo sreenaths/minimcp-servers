@@ -136,6 +136,15 @@ Perfect for authentication tokens, session IDs, password generation, unique iden
 |----------|-----------|
 | **Secure Generation** | `generate_uuid`, `generate_random_number`, `generate_random_text` |
 
+## Environment Variables
+
+The MCP servers support the following environment variables for configuration:
+
+| Variable | Description | Default | Valid Values |
+|----------|-------------|---------|--------------|
+| `MCP_SERVER_LOG_FILE` | Path to log file for persistent logging. If not set, logs only to stderr. | None | Any valid file path |
+| `MCP_SERVER_LOG_LEVEL` | Logging level to control verbosity | `WARNING` | `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL` |
+
 ## Note
 
 Generated using Claude 4 Sonnet!

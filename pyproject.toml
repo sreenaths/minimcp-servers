@@ -1,6 +1,6 @@
 [project]
 name = "minimcp-servers"
-version = "0.2.0"
+version = "0.2.1"
 description = "MCP servers built with MiniMCP to expose Python’s standard library modules."
 authors = [{ name = "Sreenath Somarajapuram", email = "somarajapuram@gmail.com" }]
 readme = "README.md"
